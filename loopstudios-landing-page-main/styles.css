@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /* ------ Colors ----- */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+
+
+    /* ------ Spacing ----- */
+    --spacing-xs: .25rem;
+    --spacing-ms: .5rem;
+    --spacing-mm: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+
+
+    /* ------ Font-Size ----- */
+    --text-size-xs: .625rem;
+    --text-size-ms: .825rem;
+    ---text-size-mm: 1rem;
+    --text-size-lg: 2rem;
+    --text-size-xl: 4rem;
+
+
+    /* ------ Border radius ----- */
+    --border-radius-small: 10px;
+
+
+    /* ------ Font Family ----- */
+    --font-family-Alata: "Alata", serif;
+    --font-family-JoserfinSans: "Josefin Sans", serif;
+
+
+    /* ------ Text Weight ----- */
+    --text-weight-400: 400;
+    --text-weight-300: 300;
+}
+
+
+
+a,
+input,
+button,
+li,
+input {
+    font-family: inherit;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    margin-block: var(--spacing-xxl);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-Alata);
+    font-weight: var(--text-weight-300);
+    background-color: var(--white);
+}
+
+
+/* --------- Header --------*/
+.header {
+    width: 100%;
+    height: 95vh;
+    background-image: url('./images/desktop/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    padding-inline: var(--spacing-xxl);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 4.5rem;
+}
+
+.nav__logo {
+    font-weight: 600;
+    font-size: var(--text-size-lg);
+    cursor: pointer;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__links li {
+    font-family: var(--font-family-JoserfinSans);
+    padding-right: var(--spacing-mm);
+}
+
+.nav__links li a {
+    font-weight: var(--text-weight-400);
+    padding-bottom: 5px;
+    ;
+    transition: .5s;
+
+}
+
+.nav__links li a:hover,
+.nav__links li a:focus {
+    border-bottom: 2px solid var(--white);
+}
+
+.hero__title--container {
+    border: 2px solid var(--white);
+    width: 40%;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+
+}
+
+.hero__title {
+    font-family: var(--font-family-JoserfinSans);
+    font-size: var(--text-size-xl);
+    font-weight: var(--text-weight-300);
+    text-transform: uppercase;
+}
+
+
+/* --------- Main --------*/
+.main {
+    margin-block: var(--spacing-lg);
+    margin-inline: var(--spacing-xxl);
+}
+
+
+
+/* --------- Interactive Section --------*/
+.interactive--section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.interactive--section img {
+    width: 750px;
+}
+
+.text--box {
+    width: 600px;
+    position: absolute;
+    right: 20%;
+    bottom: -20%;
+    background-color: var(--white);
+    padding: var(--spacing-xl);
+}
+
+.box--title {
+    font-size: 3rem;
+    font-weight: var(--text-weight-300);
+    font-family: var(--font-family-JoserfinSans);
+    text-transform: uppercase;
+    padding-block: var(--spacing-lg);
+}
+
+.box--description {
+    color: var(--dark-gray);
+}
+
+
+/* --------- Collections --------*/
+.section__collections--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: var(--spacing-xl);
+}
+
+.section__collections--title {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--dark-gray);
+    font-size: var(--text-size-lg);
+}
+
+.section__collections--button {
+    padding: .4rem 3rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--text-size-ms);
+    border: none;
+    font-weight: var(--text-weight-400);
+    cursor: pointer;
+}
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem
+}
+
+.collection__title {
+    width: 200px;
+
+    height: 300px;
+}
+
+.collection__title--1 {
+    background-image: url('./images/desktop/image-deep-earth.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
