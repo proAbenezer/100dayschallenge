@@ -66,6 +66,7 @@ section {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: .5s;
 }
 
 body {
@@ -182,6 +183,10 @@ body {
 
 
 /* --------- Collections --------*/
+.section__collections {
+    margin-block: 160px;
+}
+
 .section__collections--header {
     display: flex;
     align-items: center;
@@ -204,23 +209,141 @@ body {
     border: none;
     font-weight: var(--text-weight-400);
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    gap: 1.5rem;
+    place-content: center;
+
 }
 
 .collection {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem
-}
-
-.collection__title {
-    width: 200px;
-
-    height: 300px;
-}
-
-.collection__title--1 {
-    background-image: url('./images/desktop/image-deep-earth.jpg');
+    background: red;
+    min-height: 450px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+
+}
+
+.collection .title {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: var(--white);
+    font-family: var(--font-family-JoserfinSans);
+    font-weight: var(--text-weight-300);
+    text-transform: uppercase;
+}
+
+.collection .title span {
+    display: block;
+}
+
+.collection__title--1 {
+    background-image: url("./images/desktop/image-deep-earth.jpg");
+}
+
+.collection__title--2 {
+    background-image: url("./images/desktop/image-night-arcade.jpg");
+}
+
+.collection__title--3 {
+    background-image: url("./images/desktop/image-soccer-team.jpg");
+    background-position: top;
+}
+
+.collection__title--4 {
+    background-image: url("./images/desktop/image-grid.jpg");
+}
+
+.collection__title--5 {
+    background-image: url("./images/desktop/image-from-above.jpg");
+}
+
+.collection__title--6 {
+    background-image: url("./images/desktop/image-pocket-borealis.jpg");
+}
+
+.collection__title--7 {
+    background-image: url("./images/desktop/image-curiosity.jpg");
+}
+
+.collection__title--8 {
+    background-image: url("./images/desktop/image-fisheye.jpg");
+}
+
+
+
+
+/* --------- Collections --------*/
+
+.footer,
+.footer__socials,
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer {
+    color: var(--white);
+    background: var(--black);
+    padding-inline: var(--spacing-xxl);
+    padding-block: var(--spacing-mm);
+
+}
+
+.footer__left,
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-ms)
+}
+
+.footer__right {
+    align-items: right;
+}
+
+.footer__title {
+    font-size: var(---text-size-mm);
+}
+
+.footer__links {
+    font-size: var(--text-size-ms);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-mm)
+}
+
+.footer__links a {
+    font-size: var(---text-size-ms)
+}
+
+.footer__links li a:hover,
+.footer__links li a:focus,
+.footer__socials li a:hover,
+.footer__socials li a:focus {
+    border-bottom: 2px solid var(--white);
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: end;
+    gap: var(--spacing-mm)
+}
+
+.footer__socials img {
+    width: var(---text-size-mm);
+}
+
+.footer h5 {
+    color: var(--dark-gray);
+    font-size: var(--spacing-ms);
+
 }
