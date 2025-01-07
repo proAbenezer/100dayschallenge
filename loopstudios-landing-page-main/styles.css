@@ -94,7 +94,7 @@ body {
   font-weight: var(--text-weight-400);
 }
 .nav__links {
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .nav__links--small {
   color: var(--white);
@@ -150,7 +150,25 @@ body {
   padding-block: var(--spacing-lg);
   padding-inline: var(--spacing-mm);
 }
+
 .hero__title {
   text-transform: uppercase;
   font-size: 2.5rem;
+}
+.main {
+  margin-inline: var(--spacing-lg);
+  margin-block: var(--spacing-lg);
+}
+/* -------------------- interactive Section --------------------*/
+.interactive--section {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.interactive--section img,
+.interactive--section .text--box {
+  width: 100%;
+}
+.vr--image {
+  width: 100%;
 }
